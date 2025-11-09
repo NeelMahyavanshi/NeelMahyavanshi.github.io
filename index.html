@@ -3,187 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Neelkumar Mahyavanshi – AI Engineer & Machine Learning Developer. Building intelligent systems with Python, TensorFlow, LangChain, and cloud deployment.">
-    <meta property="og:title" content="Neelkumar Mahyavanshi | AI Engineer">
-    <meta property="og:description" content="AI Engineer building production ML models in computer vision, NLP, and predictive analytics.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://neelmahyavanshi.github.io">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
-    <title>Neelkumar Mahyavanshi | AI Engineer</title>
+    <title>Neelkumar Mahyavanshi | AI Engineer Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav role="navigation" aria-label="Main navigation">
-        <div class="container">
-            <div class="nav-logo" aria-label="Neel.ai home">Neel.ai</div>
-            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Neel</span>
+                <span class="logo-accent">.ai</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
             <div class="hero-text">
-                <h1>Neelkumar Mahyavanshi</h1>
-                <p class="subtitle">AI Engineer & Machine Learning Developer</p>
-                <p class="description">Bridging the gap between data and decisions with intelligent systems. Passionate about creating impactful AI solutions across computer vision, NLP, and predictive analytics.</p>
+                <h1 class="glitch" data-text="NEELKUMAR MAHYAVANSHI">NEELKUMAR MAHYAVANSHI</h1>
+                <div class="typing-container">
+                    <span class="typing-text"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description">
+                    Transforming complex data into intelligent solutions. Specializing in Machine Learning, 
+                    Computer Vision, NLP, and LLM Integration.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Download Resume</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section id="about" class="section">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I am a motivated AI Engineer transitioning from a technical support background, driven by a passion for building end-to-end machine learning solutions. With hands-on experience developing and deploying production-ready applications across computer vision, NLP, and predictive analytics, my goal is to leverage AI to solve complex, real-world problems.</p>
-                        <p>My journey has equipped me with strong problem-solving skills and a user-centric mindset, allowing me to transform business challenges into robust AI-powered products. I am proficient in Python, modern deep learning frameworks, and LLM integration.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section">
-            <div class="container">
-                <h2>Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card"><h3>Languages</h3><p>Python, SQL</p></div>
-                    <div class="skill-card"><h3>ML/AI</h3><p>Scikit-learn, TensorFlow, Keras, PyTorch, Supervised Learning, Deep Learning</p></div>
-                    <div class="skill-card"><h3>LLM Tools</h3><p>LangChain, OpenAI API, Hugging Face, RAG, Prompt Engineering</p></div>
-                    <div class="skill-card"><h3>Data Science</h3><p>Pandas, NumPy, Matplotlib, Seaborn, EDA, Statistical Analysis</p></div>
-                    <div class="skill-card"><h3>Computer Vision</h3><p>CNNs, Image Classification, Transfer Learning</p></div>
-                    <div class="skill-card"><h3>NLP</h3><p>Semantic Search, Conversational AI, Chatbot Development</p></div>
-                    <div class="skill-card"><h3>MLOps/Deployment</h3><p>Streamlit, Git/GitHub, Docker, API Integration</p></div>
-                    <div class="skill-card"><h3>Business Tools</h3><p>SAP, Salesforce, MS Office Suite, SharePoint</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <h3>ImmigrationGPT</h3>
-                                <p>AI-Powered Immigration Assistant</p>
-                            </div>
-                            <div class="card-back">
-                                <p>An AI chatbot using LLMs and RAG to provide accurate Canadian immigration guidance. Built with LangChain and OpenAI API for intelligent Q&A.</p>
-                                <div class="project-links">
-                                    <a href="https://immigrationgpt.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="View ImmigrationGPT live app">
-                                        <i class="fas fa-external-link-alt"></i> Live App
-                                    </a>
-                                    <a href="https://github.com/NeelMahyavanshi/ImmigrationGPT" target="_blank" rel="noopener noreferrer" aria-label="View ImmigrationGPT GitHub repository">
-                                        <i class="fab fa-github"></i> GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <h3>Car Damage Detection</h3>
-                                <p>Computer Vision Application</p>
-                            </div>
-                            <div class="card-back">
-                                <p>A computer vision model using CNNs and transfer learning to classify car damage into 6 categories with over 85% accuracy. Deployed via Streamlit.</p>
-                                <div class="project-links">
-                                    <a href="https://car-damage-detections.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="View Car Damage Detection live app">
-                                        <i class="fas fa-external-link-alt"></i> Live App
-                                    </a>
-                                    <a href="https://github.com/NeelMahyavanshi/CAR_DAMAGE_PREDICTION" target="_blank" rel="noopener noreferrer" aria-label="View Car Damage Detection GitHub repository">
-                                        <i class="fab fa-github"></i> GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <h3>Health Insurance Predictor</h3>
-                                <p>Regression Model</p>
-                            </div>
-                            <div class="card-back">
-                                <p>An end-to-end regression model to predict health insurance costs using demographic and health data, achieving an R² score of 0.85. Deployed as interactive web app.</p>
-                                <div class="project-links">
-                                    <a href="https://health-insurance-premium-predictor-neelmahyavanshi.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="View Health Insurance Predictor live app">
-                                        <i class="fas fa-external-link-alt"></i> Live App
-                                    </a>
-                                    <a href="https://github.com/NeelMahyavanshi/ml-project-premium-prediction" target="_blank" rel="noopener noreferrer" aria-label="View Health Insurance Predictor GitHub repository">
-                                        <i class="fab fa-github"></i> GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <h3>Credit Risk Model</h3>
-                                <p>Financial ML Application</p>
-                            </div>
-                            <div class="card-back">
-                                <p>A financial ML model to assess loan default probability using classification algorithms and techniques like SMOTE for imbalanced data handling. Deployed with Streamlit.</p>
-                                <div class="project-links">
-                                    <a href="https://credit-risk-utilization-ml-neel-mahyavanshi.streamlit.app" target="_blank" rel="noopener noreferrer" aria-label="View Credit Risk Model live app">
-                                        <i class="fas fa-external-link-alt"></i> Live App
-                                    </a>
-                                    <a href="https://github.com/NeelMahyavanshi/ml-project-credit-risk-model" target="_blank" rel="noopener noreferrer" aria-label="View Credit Risk Model GitHub repository">
-                                        <i class="fab fa-github"></i> GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p class="contact-text">I'm currently open to new opportunities and collaborations in AI/ML engineering. Feel free to reach out!</p>
-                <div class="contact-info">
-                    <a href="mailto:neelmahyavanshi9@gmail.com" class="contact-link" aria-label="Email Neelkumar Mahyavanshi">
-                        neelmahyavanshi9@gmail.com
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="assets/resume.pdf" class="btn btn-secondary" download>
+                        <span>Download Resume</span>
+                        <i class="fas fa-download"></i>
                     </a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/NeelMahyavanshi" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                    <a href="https://github.com/NeelMahyavanshi" target="_blank" class="social-icon">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/neelmahyavanshi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="social-icon">
                         <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:neelmahyavanshi9@gmail.com" class="social-icon">
+                        <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-glow"></div>
+                    <div class="neural-network">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Neural Network Nodes -->
+                            <circle class="node" cx="30" cy="50" r="8" />
+                            <circle class="node" cx="30" cy="100" r="8" />
+                            <circle class="node" cx="30" cy="150" r="8" />
+                            <circle class="node" cx="100" cy="40" r="8" />
+                            <circle class="node" cx="100" cy="80" r="8" />
+                            <circle class="node" cx="100" cy="120" r="8" />
+                            <circle class="node" cx="100" cy="160" r="8" />
+                            <circle class="node" cx="170" cy="75" r="8" />
+                            <circle class="node" cx="170" cy="125" r="8" />
+                            <!-- Neural Network Connections -->
+                            <line class="connection" x1="30" y1="50" x2="100" y2="40" />
+                            <line class="connection" x1="30" y1="50" x2="100" y2="80" />
+                            <line class="connection" x1="30" y1="100" x2="100" y2="80" />
+                            <line class="connection" x1="30" y1="100" x2="100" y2="120" />
+                            <line class="connection" x1="30" y1="150" x2="100" y2="120" />
+                            <line class="connection" x1="30" y1="150" x2="100" y2="160" />
+                            <line class="connection" x1="100" y1="40" x2="170" y2="75" />
+                            <line class="connection" x1="100" y1="80" x2="170" y2="75" />
+                            <line class="connection" x1="100" y1="120" x2="170" y2="125" />
+                            <line class="connection" x1="100" y1="160" x2="170" y2="125" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-    <footer>
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <p>&copy; 2025 Neelkumar Mahyavanshi. All Rights Reserved.</p>
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                About Me
+                <span class="title-line"></span>
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="fade-in">
+                        I'm a <span class="highlight">motivated AI Engineer</span> transitioning from technical support, 
+                        driven by a passion for building end-to-end machine learning solutions. With hands-on experience 
+                        in developing and deploying <span class="highlight">production-ready applications</span> across 
+                        computer vision, NLP, and predictive analytics.
+                    </p>
+                    <p class="fade-in">
+                        My journey has equipped me with strong problem-solving skills and a user-centric mindset, 
+                        allowing me to transform business challenges into robust <span class="highlight">AI-powered products</span>. 
+                        I'm proficient in Python, modern deep learning frameworks, and LLM integration.
+                    </p>
+                    <div class="stats-grid fade-in">
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="4">0</h3>
+                            <p>Live Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="2">0</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="15">0</h3>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                Technical Arsenal
+                <span class="title-line"></span>
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fas fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fas fa-brain"></i></div>
+                    <h3>ML & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Keras</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fas fa-robot"></i></div>
+                    <h3>LLM & NLP</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">RAG</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Computer Vision</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CNNs</span>
+                        <span class="skill-tag">Transfer Learning</span>
+                        <span class="skill-tag">Image Classification</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Science</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                Featured Projects
+                <span class="title-line"></span>
+            </h2>
+            <div class="projects-grid">
+                <!-- Project 1: ImmigrationGPT -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://immigrationgpt.streamlit.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/NeelMahyavanshi/ImmigrationGPT" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg project-bg-1"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ImmigrationGPT</h3>
+                        <p class="project-description">
+                            AI-powered chatbot using LLMs and RAG for Canadian immigration guidance. 
+                            Built with LangChain, OpenAI API, and advanced prompt engineering.
+                        </p>
+                        <div class="project-tech">
+                            <span>LangChain</span>
+                            <span>OpenAI</span>
+                            <span>RAG</span>
+                            <span>Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Car Damage Detection -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://car-damage-detections.streamlit.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/NeelMahyavanshi/CAR_DAMAGE_PREDICTION" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg project-bg-2"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Car Damage Detection</h3>
+                        <p class="project-description">
+                            Deep learning model using CNNs and transfer learning to classify car damage 
+                            into 6 categories with 85%+ accuracy.
+                        </p>
+                        <div class="project-tech">
+                            <span>TensorFlow</span>
+                            <span>CNNs</span>
+                            <span>Transfer Learning</span>
+                            <span>Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Health Insurance Predictor -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://health-insurance-premium-predictor-neelmahyavanshi.streamlit.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/NeelMahyavanshi/ml-project-premium-prediction" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg project-bg-3"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Health Insurance Predictor</h3>
+                        <p class="project-description">
+                            End-to-end regression model for predicting insurance premiums with R² score 
+                            of 0.85. Includes comprehensive EDA and feature engineering.
+                        </p>
+                        <div class="project-tech">
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                            <span>Regression</span>
+                            <span>EDA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Credit Risk Model -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://credit-risk-utilization-ml-neel-mahyavanshi.streamlit.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/NeelMahyavanshi/ml-project-credit-risk-model" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg project-bg-4"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Credit Risk Assessment</h3>
+                        <p class="project-description">
+                            Financial ML model for loan default prediction using XGBoost, SMOTE for 
+                            imbalanced data, and comprehensive ROC-AUC analysis.
+                        </p>
+                        <div class="project-tech">
+                            <span>XGBoost</span>
+                            <span>SMOTE</span>
+                            <span>Classification</span>
+                            <span>Financial ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                Get In Touch
+                <span class="title-line"></span>
+            </h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm currently <span class="highlight">open to new opportunities</span> and collaborations. 
+                    Whether you have a question, a project idea, or just want to connect, feel free to reach out!
+                </p>
+                <a href="mailto:neelmahyavanshi9@gmail.com" class="btn btn-primary btn-large">
+                    <span>Say Hello</span>
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>neelmahyavanshi9@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Montreal, QC, Canada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Neelkumar Mahyavanshi. Crafted with <span class="heart">❤️</span> and AI.</p>
+            <div class="footer-links">
+                <a href="https://github.com/NeelMahyavanshi" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+                <a href="mailto:neelmahyavanshi9@gmail.com">Email</a>
+            </div>
         </div>
     </footer>
 
