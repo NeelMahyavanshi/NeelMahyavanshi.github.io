@@ -273,31 +273,71 @@ class NavbarScroll {
     }
 }
 
-// Mobile Menu Toggle
+// Enhanced Mobile Menu Class
 class MobileMenu {
     constructor() {
         this.hamburger = document.querySelector('.hamburger');
         this.navMenu = document.querySelector('.nav-menu');
+        this.navLinks = document.querySelectorAll('.nav-link');
         this.init();
     }
-
+    
     init() {
-        if (!this.hamburger) return;
-
-        this.hamburger.addEventListener('click', () => {
-            this.navMenu.classList.toggle('active');
-            this.hamburger.classList.toggle('active');
+        if (!this.hamburger || !this.navMenu) {
+            console.warn('Mobile menu elements not found');
+            return;
+        }
+        
+        // Toggle menu on hamburger click
+        this.hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleMenu();
         });
-
+        
         // Close menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
+        this.navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                this.navMenu.classList.remove('active');
-                this.hamburger.classList.remove('active');
+                this.closeMenu();
             });
         });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const isClickInsideNav = this.navMenu.contains(e.target);
+            const isClickOnHamburger = this.hamburger.contains(e.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && this.navMenu.classList.contains('active')) {
+                this.closeMenu();
+            }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.navMenu.classList.contains('active')) {
+                this.closeMenu();
+            }
+        });
+    }
+    
+    toggleMenu() {
+        this.navMenu.classList.toggle('active');
+        this.hamburger.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (this.navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+    
+    closeMenu() {
+        this.navMenu.classList.remove('active');
+        this.hamburger.classList.remove('active');
+        document.body.style.overflow = '';
     }
 }
+
 
 // Easter Egg - Konami Code
 class KonamiCode {
