@@ -10,35 +10,35 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "AI Document Analyzer",
-      description: "ML-powered document analysis system using NLP for automated information extraction and categorization.",
-      tags: ["Python", "TensorFlow", "NLP", "Streamlit"],
-      github: "https://github.com/NeelMahyavanshi",
-      demo: "#",
+      title: "ImmigrationGPT",
+      description: "AI-powered immigration assistant bot using advanced LLM (RAG, LangChain, OpenAI). Provides personalized Canadian immigration guidance.",
+      tags: ["Python", "LangChain", "Streamlit", "OpenAI"],
+      github: "https://github.com/NeelMahyavanshi/ImmigrationGPT",
+      demo: "https://immigrationgpt.streamlit.app/",
       featured: true
     },
     {
-      title: "Intelligent Chatbot",
-      description: "Context-aware conversational AI with memory and multi-turn dialogue capabilities using LangChain.",
-      tags: ["LangChain", "OpenAI", "FastAPI", "React"],
-      github: "https://github.com/NeelMahyavanshi",
-      demo: "#",
+      title: "Car Damage Detection",
+      description: "Computer vision system using CNNs and transfer learning to classify car damage into 6 categories.",
+      tags: ["TensorFlow", "CNN", "Transfer Learning", "Streamlit"],
+      github: "https://github.com/NeelMahyavanshi/CAR_DAMAGE_PREDICTION",
+      demo: "https://car-damage-detections.streamlit.app/",
       featured: true
     },
     {
-      title: "Predictive Analytics Dashboard",
-      description: "Real-time data visualization and ML predictions for business intelligence and forecasting.",
-      tags: ["Python", "Scikit-learn", "Plotly", "SQL"],
-      github: "https://github.com/NeelMahyavanshi",
-      demo: "#",
+      title: "Health Insurance Predictor",
+      description: "Regression and analytics pipeline to predict insurance costs; includes real-time input, EDA, and model selection.",
+      tags: ["Scikit-learn", "Pandas", "Regression", "Streamlit"],
+      github: "https://github.com/NeelMahyavanshi/ml-project-premium-prediction",
+      demo: "https://health-insurance-premium-predictor-neelmahyavanshi.streamlit.app/",
       featured: false
     },
     {
-      title: "Computer Vision System",
-      description: "Object detection and tracking system for real-world applications with high accuracy.",
-      tags: ["PyTorch", "OpenCV", "YOLO", "Docker"],
-      github: "https://github.com/NeelMahyavanshi",
-      demo: "#",
+      title: "Credit Risk Assessment",
+      description: "ML system for credit default analysis built with XGBoost/SMOTE; full ROC/AUC analytics and real-world ML deployment.",
+      tags: ["XGBoost", "SMOTE", "Classification", "Streamlit"],
+      github: "https://github.com/NeelMahyavanshi/ml-project-credit-risk-model",
+      demo: "https://credit-risk-utilization-ml-neel-mahyavanshi.streamlit.app/",
       featured: false
     },
   ];
@@ -65,14 +65,26 @@ const Projects = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`glass-card p-8 rounded-3xl hover-lift group ${
+              className={`glass-card p-8 rounded-3xl group relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 ${
                 project.featured ? 'md:col-span-1' : ''
               }`}
             >
-              <div className="mb-4">
-                <div className="w-full h-48 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 mb-6 flex items-center justify-center overflow-hidden">
-                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary opacity-50 group-hover:scale-150 transition-transform duration-500" />
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="mb-4 relative">
+                <a 
+                  href={project.demo} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full h-48 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 mb-6 overflow-hidden relative cursor-pointer"
+                >
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary opacity-50 group-hover:scale-150 group-hover:rotate-180 transition-all duration-700" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-primary font-bold text-lg">View Live Demo →</span>
+                  </div>
+                </a>
                 
                 <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-gradient transition-all duration-300">
                   {project.title}
