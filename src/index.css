@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 40% 3%;
+    --foreground: 180 100% 95%;
+
+    --card: 220 30% 8%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 220 35% 6%;
+    --popover-foreground: 180 100% 95%;
+
+    --primary: 187 100% 50%;
+    --primary-foreground: 220 40% 3%;
+    
+    --primary-glow: 187 100% 65%;
+
+    --secondary: 25 95% 58%;
+    --secondary-foreground: 220 40% 3%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 180 10% 65%;
+
+    --accent: 187 100% 50%;
+    --accent-foreground: 220 40% 3%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 180 100% 95%;
+
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --ring: 187 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio colors */
+    --glass: 220 30% 12%;
+    --glass-border: 220 20% 25%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(187 100% 50%), hsl(25 95% 58%));
+    --gradient-mesh: radial-gradient(at 0% 0%, hsl(187 100% 50% / 0.15) 0px, transparent 50%),
+                     radial-gradient(at 100% 100%, hsl(25 95% 58% / 0.12) 0px, transparent 50%),
+                     radial-gradient(at 50% 50%, hsl(220 40% 8%) 0px, transparent 50%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(187 100% 50% / 0.3);
+    --shadow-card: 0 20px 60px -15px hsl(0 0% 0% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: hsl(var(--background));
+    background-image: var(--gradient-mesh);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-glass/40 backdrop-blur-xl border border-glass-border/50;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+  
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
